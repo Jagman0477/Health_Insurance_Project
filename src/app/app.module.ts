@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { LoginCompComponent } from './login-comp/login-comp.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DashboardComponent } from './AdminComponents/dashboard/dashboard.component';
 import { TestsComponent } from './AdminComponents/tests/tests.component';
@@ -25,7 +26,9 @@ import { TestCenterComponent } from './AdminComponents/test-center/test-center.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

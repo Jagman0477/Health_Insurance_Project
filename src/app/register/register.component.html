@@ -4,27 +4,55 @@
     <hr class="hr" style="background-color: blue; height: 2px; border: none;">
     <div class="">
         <div class="d-flex align-items-center">
-            <form action="" class="w-50 p-5">
-                <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Your Name" name="name">
+            <form action="" class="w-50 p-5" [formGroup]="registerForm">
+                <div class="mb-3 form-group">
+                    <input type="text" class="form-control mb-1" [formControl]="name" placeholder="Your Name"  name="name">
+                        <div class="error-message" [hidden]="name.valid || name.untouched">
+                            <small class="text-danger">Invalid name</small>
+                        </div>
                 </div>
                 <div class="mb-3">
-                    <input type="number" class="form-control" placeholder="Your Age" name="age">
+                    <input type="number" class="form-control mb-1" [formControl]="age" placeholder="Your Age" name="age" required>
+                        <div class="error-message" [hidden]="age.valid||age.untouched">
+                            <small class="text-danger">Invalid age</small>
+                        </div>
+                    
                 </div>
+                <!-- <div class="mb-3">
+                    <input type="text" class="form-control mb-1" [formControl]="gender" placeholder="Your Gender" name="gender">
+                        <div class="error-message" [hidden]="gender.valid||gender.untouched">
+                            <small class="text-danger">Gender invalid</small>
+                        </div>
+                </div> -->
+                <select class="form-control mb-3" [formControl]="gender" placeholder="Select Gender" name="gender">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Others</option>
+                </select>
                 <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Your Gender" name="gender">
-                </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Your Email" name="email">
+                    <input type="email" class="form-control mb-1" placeholder="Your Email" [formControl]="email" name="email">
+                        <div class="error-message" [hidden]="email.valid||email.untouched">
+                            <small class="text-danger">Invalid email</small>
+                        </div>
                 </div>
                 <div class="mb-4">
-                    <input type="password" class="form-control" placeholder="Your Password"  name="password">
+                    <input type="password" class="form-control mb-1" placeholder="Your Password" [formControl]="password"   name="password">
+                        <div class="error-message" [hidden]="password.valid||password.untouched">
+                            <small class="text-danger">Invalid password</small>
+                        </div>
                 </div>
                 <div class="mb-4">
-                    <input type="password" class="form-control" placeholder="Confirm Password"  name="confirmPassword">
+                    <input type="password" class="form-control mb-1" [formControl]="confirmPassword" placeholder="Confirm Password" required name="confirmPassword" minlength="5">
+                        <!-- <div class="error-message" [hidden]="confirmPassword.valid||confirmPassword.untouched">
+                            <small class="text-danger">Invalid confirm password</small>
+                        </div> -->
+                        <div *ngif="submitted && registerForm.get('confirmPassword').errors" class="alert alert-danger">
+                            <small class="text-danger">Confirm password is required</small>
+                        </div>    
                 </div>
                 <div class="mb-3 text-center">
-                    <button class="btn btn-primary w-50">Register</button>
+                    <button class="btn btn-primary w-50" type="submit">Register</button>
                 </div>
                 <div class="mb-3">
                     <p class="text-center">Already have an account <a href="/login">Login!</a></p>
