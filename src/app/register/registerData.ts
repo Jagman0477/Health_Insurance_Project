@@ -16,4 +16,6 @@ export class registerData{
         this.confirmPassword = '';
     }
 
+
+
 }

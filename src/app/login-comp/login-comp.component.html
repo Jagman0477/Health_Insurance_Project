@@ -1,8 +1,4 @@
-<!-- <app-navbar></app-navbar> -->
-<!-- <div class="bg-primary">
-    <hr style="margin-top: 1px; color: white; height: 10px;">
-    <h3 class="text-center p-3 pb-5 text-light">WELCOME TO HEALTHCARE CENTER</h3>
-</div> -->
+
 <div class="container w-50 mt-5 border border-primary border-2 rounded mb-4">
     <h4 class="text-primary m-2">Login Page</h4>
     <hr class="hr" style="background-color: blue; height: 2px; border: none;">
@@ -11,10 +7,10 @@
             <img src="/assets/images/patient-on-doctor-appointment.jpg" alt="StockImage" class="img-fluid" class="w-50">
             <form action="" class="w-50 p-5">
                 <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Your Email" name="email">
+                    <input type="email" class="form-control" placeholder="Your Email" name="email" required minlength="6">
                 </div>
                 <div class="mb-4">
-                    <input type="password" class="form-control" placeholder="password" name="password">
+                    <input type="password" class="form-control" placeholder="password" name="password" required minlength="5">
                 </div>
                 <div class="mb-3 text-center">
                     <button class="btn btn-primary w-50">Login</button>
@@ -26,4 +22,3 @@
         </div>
     </div>    
 </div>
-<app-footer></app-footer>
