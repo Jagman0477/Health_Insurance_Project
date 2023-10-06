@@ -11,6 +11,7 @@ import { DashboardComponent } from './AdminComponents/dashboard/dashboard.compon
 import { TestsComponent } from './AdminComponents/tests/tests.component';
 import { AdminNavbarComponent } from './AdminComponents/admin-navbar/admin-navbar.component';
 import { TestCenterComponent } from './AdminComponents/test-center/test-center.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { TestCenterComponent } from './AdminComponents/test-center/test-center.c
     LoginCompComponent,
     RegisterComponent,
     HomeComponent,
- 
+    RegisterComponent,
     DashboardComponent,
     TestsComponent,
     AdminNavbarComponent,
@@ -28,7 +29,8 @@ import { TestCenterComponent } from './AdminComponents/test-center/test-center.c
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
