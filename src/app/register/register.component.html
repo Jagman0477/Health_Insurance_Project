@@ -37,7 +37,7 @@
                             <small class="text-danger">Invalid email</small>
                         </div>
                 </div>
-                <div class="mb-4 form-group">
+                <div class="mb-3 form-group">
                     <input type="password" class="form-control mb-1" placeholder="Your Password" formControlName="password" name="password">
                         <div class="error-message"  *ngIf="!registerForm.get('password')?.valid && registerForm.get('password')?.touched">
                             <small class="text-danger">Invalid password</small>
