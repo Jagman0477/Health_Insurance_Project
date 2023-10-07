@@ -16,30 +16,30 @@ export class RegisterComponent {
   allGenders: string[] = ['Male', 'Female', 'Others'];
 
   constructor(private fb: FormBuilder){
-    this.createForm();
+    // this.createForm();
     this.regUser = new registerData();
   }
 
-  createForm() {
-    this.registerForm = this.fb.group(
-      {
-        // name: this.fb.control<string>('', [Validators.required, Validators.minLength(4)]),
-        // age: this.fb.control<number>(0, [Validators.required]),
-        // gender : this.fb.control<string>('', Validators.required),
-        // email : this.fb.control<string>('', [Validators.required, Validators.email]),
-        // password : this.fb.control<string>('', [Validators.required, Validators.minLength(6)]),
-        // confirmPassword : this.fb.control<string>('', [Validators.required, Validators.minLength(6)])
-        'name': new FormControl(null, [Validators.required, Validators.minLength(4)]),
-        'age': new FormControl(null, [Validators.required]),
-        'gender' : new FormControl(null, Validators.required),
-        'email' : new FormControl(null, [Validators.required, Validators.email]),
-        'password' : new FormControl(null, [Validators.required, Validators.minLength(6)]),
-        'confirmPassword' : new FormControl(null, [Validators.required, Validators.minLength(6)])
-      },{
-          validators: validatePassword
-      }
-    )
-  }
+  // createForm() {
+  //   this.registerForm = this.fb.group(
+  //     {
+  //       // name: this.fb.control<string>('', [Validators.required, Validators.minLength(4)]),
+  //       // age: this.fb.control<number>(0, [Validators.required]),
+  //       // gender : this.fb.control<string>('', Validators.required),
+  //       // email : this.fb.control<string>('', [Validators.required, Validators.email]),
+  //       // password : this.fb.control<string>('', [Validators.required, Validators.minLength(6)]),
+  //       // confirmPassword : this.fb.control<string>('', [Validators.required, Validators.minLength(6)])
+  //       'name': new FormControl(null, [Validators.required, Validators.minLength(4)]),
+  //       'age': new FormControl(null, [Validators.required]),
+  //       'gender' : new FormControl(null, Validators.required),
+  //       'email' : new FormControl(null, [Validators.required, Validators.email]),
+  //       'password' : new FormControl(null, [Validators.required, Validators.minLength(6)]),
+  //       'confirmPassword' : new FormControl(null, [Validators.required, Validators.minLength(6)])
+  //     },{
+  //         validators: validatePassword
+  //     }
+  //   )
+  // }
 
   ngOnInit(): void{  
     this.registerForm = new FormGroup(
