@@ -1,0 +1,13 @@
+{
+  "register": [
+    {
+      "name": "Pablo Escobar",
+      "age": 67,
+      "gender": "Male",
+      "email": "pablo.123@hotmail.com",
+      "password": "pabloRich",
+      "type": "admin",
+      "id": 1
+    }
+  ]
+}

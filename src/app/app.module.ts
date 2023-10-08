@@ -12,6 +12,7 @@ import { TestsComponent } from './AdminComponents/tests/tests.component';
 import { AdminNavbarComponent } from './AdminComponents/admin-navbar/admin-navbar.component';
 import { TestCenterComponent } from './AdminComponents/test-center/test-center.component';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

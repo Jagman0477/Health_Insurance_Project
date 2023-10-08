@@ -4,7 +4,7 @@
     <hr class="hr" style="background-color: blue; height: 2px; border: none;">
     <div class="">
         <div class="d-flex align-items-center">
-            <form action="" class="w-50 p-5" [formGroup]="registerForm" (ngSubmit)="submit()">
+            <form action="" class="w-50 p-5" [formGroup]="registerForm" (ngSubmit)="submit(registerForm.value)">
                 <div class="mb-3 form-group">
                     <input type="text" class="form-control mb-1" formControlName="name" placeholder="Your Name"  name="name">
                         <div class="error-message" *ngIf="!registerForm.get('name')!.valid && registerForm.get('name')!.touched">

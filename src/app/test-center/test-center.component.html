@@ -1,0 +1,61 @@
+<div class="d-flex row">
+    <div class="container col-7 ">
+        <h3 class="mt-5">Test Center List</h3>
+        <hr>
+        <table class="table text-center mt-2">
+            <thead>
+                <tr >
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Contact No.</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Tests Offered</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>MediCenter</td>
+                    <td>987456123</td>
+                    <td>Greater Noida   </td>
+                    <td>medi@gmail.com</td>
+                    <td>Blood Test</td>
+                    <td>
+                        <button class="btn btn-warning">Edit</button>
+                        &nbsp;
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container col-3">
+        <h3 class="mt-5">Add/Update Center</h3>
+        <hr>
+        <form class="row" >
+            <div class="form-group p-2 " >
+                <input type="text" placeholder="Center Name" class="form-control"/>
+            </div>
+            <div class="form-group p-2 ">
+                <input type="number" placeholder="Contact No." class="form-control"/>
+            </div>
+            <div class="form-group p-2 col-6">
+                <input type="text" placeholder="Enter Address" class="form-control"/>
+            </div>
+            <div class="form-group p-2 col-6">
+                <input type="email" placeholder="Enter Email" class="form-control"/>
+            </div>
+            <div class="form-group p-2 ">
+                <input type="email" placeholder="Tests Available" class="form-control"/>
+            </div>
+            <div class="form-group p-2">
+                <button class="btn btn-success" type="submit" >Submit</button>
+                        &nbsp;
+                <button class="btn btn-info" type="reset" >Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
