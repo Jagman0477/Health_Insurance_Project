@@ -1,0 +1,35 @@
+
+<div class="container w-50 mt-5 border border-primary border-2 rounded mb-4">
+    <h4 class="text-primary m-2">Login Page</h4>
+    <hr class="hr" style="background-color: blue; height: 2px; border: none;">
+    <div class="">
+        <div class="d-flex align-items-center">
+            <img src="/assets/images/patient-on-doctor-appointment.jpg" alt="StockImage" class="img-fluid" class="w-50">
+            <form action="" class="w-50 p-5" [formGroup]="loginForm" (ngSubmit)="onsubmit(loginForm.value)">
+                <div class="mb-3">
+                   <div class="mb-1">
+                        <input type="email" class="form-control" placeholder="Your Email" name="email" required minlength="6" formControlName="email">
+                    </div>
+                    <div class="error-message"  *ngIf="!loginForm.get('email')!.valid && loginForm.get('email')!.touched">
+                        <small class="text-danger">Invalid email</small>
+                    </div> 
+                </div>
+                <div class="mb-3">
+                    <div class="mb-1">
+                        <input type="password" class="form-control" placeholder="password" name="password" required minlength="5" formControlName="password">
+                    </div>
+                    <div class="error-message"  *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+                        <small class="text-danger">Invalid password</small>
+                    </div>
+                </div>
+                
+                <div class="mb-3 text-center">
+                    <button class="btn btn-primary w-50" [disabled]="!loginForm.valid">Login</button>
+                </div>
+                <div class="mb-3">
+                    <p class="text-center">Don't have an account <a href="/register">Register!</a></p>
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>
