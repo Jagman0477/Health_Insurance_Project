@@ -35,21 +35,26 @@
     <div class="container col-3">
         <h3 class="mt-5">Add/Update Center</h3>
         <hr>
-        <form class="row" >
+        <form class="row" [formGroup]="centerForm" (ngSubmit)="submitCenter()">
             <div class="form-group p-2 " >
-                <input type="text" placeholder="Center Name" class="form-control"/>
+                <input type="text" placeholder="Center Name" class="form-control" formControlName="centerName"/>
+                <span style="color: red;" *ngIf="center && center.invalid && center.touched">Please enter valid input</span>
             </div>
             <div class="form-group p-2 ">
-                <input type="number" placeholder="Contact No." class="form-control"/>
+                <input type="number" placeholder="Contact No." class="form-control" formControlName="centerContact"/>
+                <span style="color: red;" *ngIf="center && center.invalid && center.touched">Please enter valid input</span>
             </div>
             <div class="form-group p-2 col-6">
-                <input type="text" placeholder="Enter Address" class="form-control"/>
+                <input type="text" placeholder="Enter Address" class="form-control" formControlName="centerAddress"/>
+                <span style="color: red;" *ngIf="center && center.invalid && center.touched">Please enter valid input</span>
             </div>
             <div class="form-group p-2 col-6">
-                <input type="email" placeholder="Enter Email" class="form-control"/>
+                <input type="email" placeholder="Enter Email" class="form-control" formControlName="centerEmail"/>
+                <span style="color: red;" *ngIf="center && center.invalid && center.touched">Please enter valid input</span>
             </div>
             <div class="form-group p-2 ">
-                <input type="email" placeholder="Tests Available" class="form-control"/>
+                <input type="text" placeholder="Tests Available" class="form-control" formControlName="testsOffered"/>
+                <span style="color: red;" *ngIf="center && center.invalid && center.touched">Please enter valid input</span>
             </div>
             <div class="form-group p-2">
                 <button class="btn btn-success" type="submit" >Submit</button>
