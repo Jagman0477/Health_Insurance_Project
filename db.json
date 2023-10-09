@@ -1,0 +1,36 @@
+{
+  "tests": [
+    {
+      "id": 1,
+      "testName": "Blood Test",
+      "testPrice": "120",
+      "testNormalValue": 120,
+      "testUnits": 12
+    },
+    {
+      "testName": "BloodTest",
+      "testPrice": 99,
+      "testNormalValue": 120,
+      "testUnits": 10,
+      "id": 2
+    }
+  ],
+  "testCenter": [
+    {
+      "id": 1,
+      "centerName": "Medicenter",
+      "centerContact": "4576546",
+      "centerAddress": "Greater Noida",
+      "centerEmail": "medi@gmail.com",
+      "testsOffered": "blood_test"
+    },
+    {
+      "centerName": "hOSPITALcenter",
+      "centerContact": "5476546",
+      "centerAddress": "Noida",
+      "centerEmail": "medi@gmail.com",
+      "testsOffered": "heart_test",
+      "id": 2
+    }
+  ]
+}
