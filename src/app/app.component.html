@@ -1,332 +1,166 @@
 <div>
+  <nav
+    class="navbar navbar-light navbar-expand-lg"
+    style="background-color: rgb(153, 220, 248); height: 60px"
+  >
+    <img
+      src="https://o.remove.bg/downloads/c744e12b-6f94-4f97-a1a0-7a5eb4510d2e/Medical-health-care-logo-design-template-removebg-preview.png
 
-
-
-  <nav class="navbar navbar-light navbar-expand-lg" style="background-color: rgb(60, 179, 230);">
+   "
+      alt=""
+      width="70"
+      height="70"
+    />
 
     <div class="container-fluid">
+      <p
+        class="navbar-brand navbar-text fw-bold"
+        style="width: 20%; color: rgb(0, 120, 201)"
+      >
+        HealthCare System
+      </p>
 
-      <p class="navbar-brand navbar-text text-dark text-uppercase" style="width: 20%;">Health Care System</p>
+      <div style="width: 20%">
+        <ul class="navbar-nav navbar-text fw-bold">
+          <li class="nav-item ms-5">
+            <a routerLink="/" class="text-decoration-none text-dark">Home</a>
+          </li>
 
-    <div style="width: 20%;">
+          <li class="nav-item ms-5">
+            <a routerLink="about" class="text-decoration-none text-dark"
+              >About</a
+            >
+          </li>
 
-      <ul class="navbar-nav navbar-text fw-bold">
+          <li class="nav-item ms-5">
+            <a routerLink="login" class="text-decoration-none text-dark"
+              >Login</a
+            >
+          </li>
 
-        <li class="nav-item ms-5">
+          <li class="nav-item ms-5">
+            <a routerLink="register" class="text-decoration-none text-dark"
+              >Register</a
+            >
+          </li>
+        </ul>
+      </div>
 
-          <a routerLink="/" class="text-decoration-none text-dark">Home</a>
+      <form class="d-flex input-group w-auto" style="width: 60%">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Search"
+          aria-label="Search"
+        />
 
-        </li>
-
-        <li class="nav-item ms-5">
-
-          <a routerLink="about" class="text-decoration-none text-dark">About</a>
-
-        </li>
-
-        <li class="nav-item ms-5">
-
-          <a routerLink="login" class="text-decoration-none text-dark">Login</a>
-
-        </li>
-
-        <li class="nav-item ms-5">
-
-          <a routerLink="register" class="text-decoration-none text-dark">Register</a>
-
-        </li>
-
-      </ul>
-
+        <button class="btn btn-outline-primary" type="button">Search</button>
+      </form>
     </div>
-
-    <form class="d-flex input-group w-auto" style="width: 60%;">
-
-      <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
-
-      <button class="btn btn-outline-primary" type="button"> Search </button>
-
-     </form>
-
-  </div>
-
   </nav>
 
   <!-- <h1 class="text-center">HEALTH APPOINTMENT SYSTEM</h1>
+ 
+    -->
 
-   -->
+  <router-outlet></router-outlet>
 
-   <router-outlet></router-outlet>
+  <div>
+    <footer class="bg-light text-center text-dark">
+      <hr />
 
-   <div>
+      <div class="container p-4 d-flex justify-content-around">
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">About us</h5>
 
-    <footer class="bg-light text-center text-dark ">
+          <hr />
 
-     <div class="container p-4 d-flex justify-content-around">
+          <p>Book you Appointment Now!</p>
 
-       <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <p>We care for your health!</p>
 
-        <h5 class="text-uppercase mb-4">About us</h5>
+          <div class="mt-4">
+            <a type="button" class="btn btn-floating btn-light btn-lg"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
 
-        <p>
+            <a type="button" class="btn btn-floating btn-light btn-lg"
+              ><i class="fab fa-dribbble"></i
+            ></a>
 
-          Book your APPOINTMENT NOW!
+            <a type="button" class="btn btn-floating btn-light btn-lg"
+              ><i class="fab fa-twitter"></i
+            ></a>
 
-        </p>
-
-        <p>
-
-         Stay safe!
-
-        </p>
-
-        <div class="mt-4">
-
-         <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-facebook-f"></i></a>
-
-         <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-dribbble"></i></a>
-
-         <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-twitter"></i></a>
-
-         <a type="button" class="btn btn-floating btn-light btn-lg"><i
-
-           class="fab fa-google-plus-g"></i></a>
-
+            <a type="button" class="btn btn-floating btn-light btn-lg"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+          </div>
         </div>
 
-       </div>
+        <div>
+          <h5 class="text-uppercase mb-4">Contact Details</h5>
 
-       <div>
+          <hr />
 
-        <h5 class="text-uppercase mb-5">Contact Details</h5>
+          <ul class="fa-ul" style="margin-left: 1.65em">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-home"></i></span
+              ><span class="ms-2">Healthcare, sector-18 Greater Noida</span>
+            </li>
 
-        <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span
+              ><span class="ms-2">info@healthcaresystem.com</span>
+            </li>
 
-         <li class="mb-3">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-phone"></i></span
+              ><span class="ms-2">+91- 9876543210</span>
+            </li>
+          </ul>
+        </div>
 
-          <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Healthcare,
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Opening hours</h5>
 
-           sector-18
+          <hr />
 
-           Greater Noida</span>
+          <table class="table text-center text-white w-10">
+            <tbody class="fw-normal">
+              <tr>
+                <td>Mon - Thu:</td>
 
-         </li>
+                <td>8am - 9pm</td>
+              </tr>
 
-         <li class="mb-3">
+              <tr>
+                <td>Fri - Sat:</td>
 
-          <span class="fa-li"><i class="fas fa-envelope"></i></span><span
+                <td>8am - 1am</td>
+              </tr>
 
-           class="ms-2">info@healthcaresystem.com</span>
+              <tr>
+                <td>Sunday:</td>
 
-         </li>
+                <td>9am - 10pm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-         <li class="mb-3">
-
-          <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+91-
-
-           9876543210</span>
-
-         </li>
-
-        </ul>
-
-       </div>
-
-       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-
-        <h5 class="text-uppercase mb-4">Opening hours</h5>
-
-        <table class="table text-center text-white w-10">
-
-         <tbody class="fw-normal">
-
-          <tr>
-
-           <td>Mon - Thu:</td>
-
-           <td>8am - 9pm</td>
-
-          </tr>
-
-          <tr>
-
-           <td>Fri - Sat:</td>
-
-           <td>8am - 1am</td>
-
-          </tr>
-
-          <tr>
-
-           <td>Sunday:</td>
-
-           <td>9am - 10pm</td>
-
-          </tr>
-
-         </tbody>
-
-        </table>
-
-       </div>
-
-     </div>
-
-     <div class="bg-dark text-white text-center py-3">
-
-      <p>&copy; 2023 Health Care System. All rights reserved.</p>
-
-     </div>
-
+      <div class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Health Care System. All rights reserved.</p>
+      </div>
     </footer>
+  </div>
 
+  <!-- <app-navbar></app-navbar> -->
+
+  <!-- <app-dashboard></app-dashboard> -->
+
+  <!-- <app-admin-navbar> </app-admin-navbar> -->
+
+  <!-- <router-outlet></router-outlet> -->
 </div>
-
-<!-- <app-navbar></app-navbar> -->
-
-<!-- <app-dashboard></app-dashboard> -->
-
-<!-- <app-admin-navbar> </app-admin-navbar> -->
-
-<!-- <router-outlet></router-outlet> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

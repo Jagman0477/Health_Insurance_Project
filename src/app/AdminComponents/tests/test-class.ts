@@ -1,5 +1,5 @@
 export class TestClass {
-  id?:number
+  id:number=0
     testName:string=""
        testPrice?:number
        testNormalValue?:number
