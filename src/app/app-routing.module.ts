@@ -6,13 +6,20 @@ import { DashboardComponent } from './AdminComponents/dashboard/dashboard.compon
 import { TestsComponent } from './AdminComponents/tests/tests.component';
 import { TestCenterComponent } from './AdminComponents/test-center/test-center.component';
 import { isAuthGuard } from './auth.guard';
+import { isAdminAuthGuard } from 'src/adminAuthGuard/adminauth.guard';
+import { AboutComponent } from './about/about.component';
+import { LogoutComponent } from './logout/logout.component';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 
 const routes: Routes = [
   { path:"login", component: LoginCompComponent },
   { path:"register", component: RegisterComponent},
-  { path:"dashboard",component:DashboardComponent, canActivate: [isAuthGuard]},
-  { path:"tests", component:TestsComponent},
-  { path:"testCenter", component:TestCenterComponent}
+  { path:"about", component: AboutComponent},
+  { path:"admindashboard",component:DashboardComponent, canActivate: [isAdminAuthGuard]},
+  { path:"tests", component:TestsComponent, canActivate: [isAdminAuthGuard]},
+  { path:"testCenter", component:TestCenterComponent, canActivate: [isAdminAuthGuard]},
+  { path:"logout", component:LogoutComponent},
+  { path: "dashboard", component: CustomerDashboardComponent, canActivate: [isAuthGuard]}
 ];
 
 @NgModule({

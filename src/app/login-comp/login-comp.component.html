@@ -25,6 +25,9 @@
                 
                 <div class="mb-3 text-center">
                     <button class="btn btn-primary w-50" [disabled]="!loginForm.valid">Login</button>
+                    <div class="error-message">
+                        <small class="text-danger">{{authError}}</small>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <p class="text-center">Don't have an account <a href="/register">Register!</a></p>

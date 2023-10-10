@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginServiceService } from '../services/loginService/login-service.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+  constructor(private login: LoginServiceService) {  }
+
+  ngOnInit(): void{
+    this.login.reloadDashboard();
+  }
 
 }

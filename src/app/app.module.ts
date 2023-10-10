@@ -13,6 +13,12 @@ import { AdminNavbarComponent } from './AdminComponents/admin-navbar/admin-navba
 import { TestCenterComponent } from './AdminComponents/test-center/test-center.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { LogoutComponent } from './logout/logout.component';
+import { isAuthGuard } from './auth.guard';
+import { isAdminAuthGuard } from 'src/adminAuthGuard/adminauth.guard';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +31,10 @@ import { HttpClientModule } from '@angular/common/http';
     TestsComponent,
     AdminNavbarComponent,
     TestCenterComponent,
+    NavbarComponent,
+    FooterComponent,
+    LogoutComponent,
+    CustomerDashboardComponent,
   ],
   imports: [
     BrowserModule,

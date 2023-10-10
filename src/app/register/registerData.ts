@@ -6,6 +6,7 @@ export class registerData{
     email:string;
     password:string;
     confirmPassword:string;
+    type: string;
 
     constructor(){
         this.name = '';
@@ -14,6 +15,7 @@ export class registerData{
         this.email = '';
         this.password = '';
         this.confirmPassword = '';
+        this.type = "customer";
     }
  
 }
