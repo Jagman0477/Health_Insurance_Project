@@ -1,0 +1,9 @@
+.table-responsive {
+    max-height: 320px;
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 8px;
+        background-color: #aaa;
+       color: black;
+    }}
+   

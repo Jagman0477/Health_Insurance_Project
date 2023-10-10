@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient } from '@angular/common/http'
+import { TestClass } from '../tests/test-class';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +10,13 @@ export class TestsService {
   
   constructor(private http: HttpClient) { }
   url="http://localhost:3000/tests"
-  getList(){
-    console.log("Get Teests List")
-    return this.http.get(this.url)
+  getTestsList(){
+   
+    return this.http.get<TestClass[]>(this.url)
   }
 
-  addTests(data:object  ){
+  addTests(data:object  ){  
+    
     return this.http.post(this.url,data)
   }
 }

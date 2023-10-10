@@ -24,29 +24,31 @@
                         &nbsp;
                 <button class="btn btn-info" type="reset" >Cancel</button>
             </div>
+            <p class="text-success">{{addTestMessage}}</p> 
         </form>
     </div>
     <div class="container col-5 ">
         <h3 class="mt-5">Tests List</h3>
         <hr>
-        <table class="table text-center mt-2">
+        <div class="table-responsive">
+        <table class="table text-center mt-1 table-striped  ">
             <thead>
-                <tr >
+                <tr>
                     <th>Id</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Normal Value</th>
-                    <th>Units</th>
-                    <th>Action</th>
+                    <th >Name</th>
+                    <th >Price</th>
+                    <th >Normal Value</th>
+                    <th >Units</th>
+                    <th >Action</th>
                 </tr>
             </thead>
             <tbody>
-                <tr >
-                    <td>{{1}}</td>
-                    <td>{{testName}}</td>
-                    <td>{{testPrice}}</td>
-                    <td>{{testNormalValue}}</td>
-                    <td>{{testUnits}}</td>
+                <tr *ngFor="let test of testList">
+                    <td>{{test.id}}</td>
+                    <td>{{test.testName}}</td>
+                    <td>{{test.testPrice}}</td>
+                    <td>{{test.testNormalValue}}</td>
+                    <td>{{test.testUnits}}</td>
                     <td>
                         <button class="btn btn-warning">Edit</button>
                         &nbsp;
@@ -55,5 +57,6 @@
                 </tr>
             </tbody>
         </table>
+        </div>
     </div>
 </div>

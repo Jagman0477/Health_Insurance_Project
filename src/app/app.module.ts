@@ -13,6 +13,7 @@ import { AdminNavbarComponent } from './AdminComponents/admin-navbar/admin-navba
 import { TestCenterComponent } from './AdminComponents/test-center/test-center.component';
 import { CommonModule } from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {HttpClientModule} from '@angular/common/http';
     TestsComponent,
     AdminNavbarComponent,
     TestCenterComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

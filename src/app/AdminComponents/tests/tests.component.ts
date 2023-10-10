@@ -14,20 +14,25 @@ export class TestsComponent implements OnInit{
 
   submitted = false;  
 
+  addTestMessage:string|undefined;
   constructor(private tests:TestsService){}
 
   testForms(data:object){
-    // console.warn(data);
     this.submitted=true;
     this.tests.addTests(data).subscribe((res)=>{
-      console.warn(res )
+      if(res){
+        this.addTestMessage="Test has been added";
+      }
+      setTimeout(()=>this.addTestMessage=undefined,3000)
     });
   }
 
-  
+  testList:undefined|TestClass[];
 
   ngOnInit():void{
-    
+    this.tests.getTestsList().subscribe((res)=>{
+      this.testList=res; 
+    })
   }
 
 }
