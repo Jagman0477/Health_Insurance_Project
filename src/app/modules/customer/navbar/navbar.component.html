@@ -1,0 +1,109 @@
+<div>
+  <nav
+    class="navbar navbar-light navbar-expand-lg"
+    style="background-color: rgb(60, 179, 230)"
+  >
+
+<!-- Navbar for not logged in  -->
+    <!-- <div
+      class="container-fluid"
+      id="homeNavbar"
+      *ngIf="role !== 'admin' && role !== 'customer'"
+    >
+      <p class="navbar-brand navbar-text text-dark" style="width: 20%">
+        HealthAppointmentSystem
+      </p>
+      <div style="width: 20%">
+        <ul class="navbar-nav navbar-text fw-bold">
+          <li class="nav-item ms-5">
+            <a routerLink="/" class="text-decoration-none text-dark">Home</a>
+          </li>
+
+          <li class="nav-item ms-5">
+            <a routerLink="about" class="text-decoration-none text-dark"
+              >About</a
+            >
+          </li>
+          <li class="nav-item ms-5">
+            <a routerLink="login" class="text-decoration-none text-dark"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item ms-5">
+            <a routerLink="register" class="text-decoration-none text-dark"
+              >Register</a
+            >
+          </li>
+        </ul>
+      </div>
+      <form class="d-flex input-group w-auto" style="width: 60%">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-primary" type="button">Search</button>
+      </form>
+    </div> -->
+
+    <!-- Navbar for admin  -->
+    <!-- <div class="container-fluid" id="adminNavbar">
+      <p class="navbar-brand navbar-text text-dark" style="width: 20%">
+        HealthAppointmentSystem
+      </p>
+      <div>
+        <ul class="navbar-nav navbar-text fw-bold">
+          <li class="nav-item ms-5">
+            <a class="text-decoration-none text-dark" routerLink="/admindashboard"
+              >Dashboard</a
+            >
+          </li>
+          <li class="nav-item ms-5">
+            <a class="text-decoration-none text-dark" routerLink="/tests"
+              >Tests</a
+            >
+          </li>
+          <li class="nav-item ms-5">
+            <a class="text-decoration-none text-dark" routerLink="/testCenter"
+              >Center</a
+            >
+          </li>
+          <li class="nav-item ms-5">
+            <a class="text-decoration-none text-dark" routerLink="/patientList">Patients</a>
+          </li>
+          <li class="nav-item ms-5">
+            <a class="text-decoration-none text-dark" routerLink="/appointmentList">Appointments</a>
+          </li>
+          <li class="nav-item ms-5">
+            <a class="text-decoration-none text-dark" routerLink="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- Navbar for customer  -->
+    <div class="container-fluid" id="adminNavbar" *ngIf="role === 'customer'">
+        <p class="navbar-brand navbar-text text-dark" style="width: 20%">
+          HealthAppointmentSystem
+        </p>
+        <div>
+          <ul class="navbar-nav navbar-text fw-bold">
+            <li class="nav-item ms-5">
+              <a class="text-decoration-none text-dark" routerLink="/addAppointment"
+                >Add Appointment</a
+              >
+            </li>
+            <li class="nav-item ms-5">
+              <a class="text-decoration-none text-dark" routerLink="/viewAppointment"
+                >View Appointment</a
+              >
+            </li>
+            <li class="nav-item ms-5">
+              <a class="text-decoration-none text-dark" routerLink="/logout">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </nav>
+</div>

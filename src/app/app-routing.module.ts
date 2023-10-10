@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginCompComponent } from './login-comp/login-comp.component';
-import { RegisterComponent } from './register/register.component';
-import { DashboardComponent } from './AdminComponents/dashboard/dashboard.component';
-import { TestsComponent } from './AdminComponents/tests/tests.component';
-import { TestCenterComponent } from './AdminComponents/test-center/test-center.component';
+import { LoginCompComponent } from './modules/customer/login-comp/login-comp.component';
+import { RegisterComponent } from './modules/customer/register/register.component';
+import { isAuthGuard } from './auth.guard';
+import { isAdminAuthGuard } from 'src/adminAuthGuard/adminauth.guard';
+import { AboutComponent } from './modules/customer/about/about.component';
+import { LogoutComponent } from './modules/customer/logout/logout.component';
+import { CustomerDashboardComponent } from './modules/customer/customer-dashboard/customer-dashboard.component';
 
 const routes: Routes = [
-  { path:"login", component: LoginCompComponent },
-  { path:"register", component: RegisterComponent},
-  { path:"dashboard",component:DashboardComponent},
-  { path:"tests", component:TestsComponent},
-  { path:"testCenter", component:TestCenterComponent }
+  { path:"admin", loadChildren: () => import('./modules/admin/admin.module').then((m) => m.AdminModule)},
+  { path:"auth", loadChildren: () => import('./modules/customer/auth.module').then((m) => m.AuthModule)}
 ];
 
-@NgModule({
+@NgModule({ 
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
