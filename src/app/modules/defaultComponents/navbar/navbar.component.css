@@ -1,0 +1,9 @@
+.btn-custom:hover,
+a:hover {
+  opacity: 0.5;
+
+  color: #ffffff;
+}
+a{
+    text-transform: uppercase;
+}
