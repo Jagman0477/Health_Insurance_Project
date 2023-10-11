@@ -16,7 +16,7 @@ export class TestsService {
     return this.http.get<TestClass[]>(this.url)
   }
 
-  addTests(data:TestClass[] ){  
+  addTests(data:TestClass[]){  
     return this.http.post(this.url,data)
   }
   deleteTest(id:number){

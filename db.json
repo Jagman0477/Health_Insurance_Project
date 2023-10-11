@@ -46,12 +46,20 @@
       "testsOffered": "blood_test"
     },
     {
-      "centerName": "hOSPITALcenter",
-      "centerContact": "5476546",
-      "centerAddress": "Noida",
-      "centerEmail": "medi@gmail.com",
-      "testsOffered": "heart_test",
-      "id": 2
+      "id": 2,
+      "centerName": "RajivCenter",
+      "centerContact": 56456464,
+      "centerAddress": "delhui",
+      "centerEmail": "raj@gmao.com",
+      "testsOffered": "454test"
+    },
+    {
+      "centerName": "amitcenter",
+      "centerContact": 987654432,
+      "centerAddress": "greater noida",
+      "centerEmail": "manik@gmail.com",
+      "testsOffered": "7yhsvd",
+      "id": 3
     }
   ]
 }

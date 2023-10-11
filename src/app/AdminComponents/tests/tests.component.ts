@@ -24,12 +24,7 @@ export class TestsComponent implements OnInit {
     this.tests.addTests(data).subscribe((res) => {
       if (res) {
         this.addTestMessage = 'Test has been added';
-
-        this.tests.getTestsList().subscribe((res) => {
-          if(res){
-            this.testList = res;
-          }
-        });
+        this.refreshingTestList();
       }
       setTimeout(() => (this.addTestMessage = undefined), 3000);
     });
