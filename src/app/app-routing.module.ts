@@ -8,6 +8,7 @@ import { TestCenterComponent } from './AdminComponents/test-center/test-center.c
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ApproveComponent } from './AdminComponents/approve/approve.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   {path: 'tests' , component:TestsComponent},
   { path: 'testCenter', component: TestCenterComponent },
-  {path:'approve', component:ApproveComponent}
+  {path:'approve', component:ApproveComponent},
+  {path:'profile',component:ProfileComponent}
 ];
 
 @NgModule({

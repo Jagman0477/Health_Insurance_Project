@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { ApproveComponent } from './AdminComponents/approve/approve.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ApproveComponent } from './AdminComponents/approve/approve.component';
     TestCenterComponent,
     AboutComponent,
     ApproveComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
