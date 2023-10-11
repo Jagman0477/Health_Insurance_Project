@@ -1,0 +1,74 @@
+<div class="d-flex ">
+    <div class="container col-7">
+        <h3 class="mt-5">Appointment List</h3>
+        <hr>
+        <table class="table text-center mt-2">
+            <thead>
+                <tr >
+                    <th>Id</th>
+                    <th>Patient Name</th>
+                    <th>Appointment Date</th>
+                    <th>Test Name</th>
+                    <th>Center Name</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>   
+            </thead>
+            <tbody>
+                <tr >
+                    <td>1</td>
+                    <td>Rajat</td>
+                    <td>12/0/2023</td>
+                    <td>Blood Test</td>
+                    <td>Medicenter</td>
+                    <td>Pending</td>
+                    <td>
+                        <button class="btn btn-warning">Accept</button>
+                        &nbsp;
+                        <button class="btn btn-danger">Reject</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+   
+        <div class="container col-3">
+            <h3 class="mt-5">Add/Update Test Result</h3>
+            <hr>
+            <form class="row" #resultForm="ngForm" (ngSubmit)="submitResultForm(); resultForm.resetForm()">
+                <div class="form-group p-2 " >
+                    <label for="patientId" class="form-label">Appointment Id</label>
+                    <input type="number" name="patientId" id="patientId" class="form-control" [(ngModel)]="model.patientName" #patientName="ngModel" ngModel/>
+                </div>
+                <div class="form-group p-2 " >
+                    <label for="patientName" class="form-label">Patient Name</label>
+                    <input type="text" name="patientName" id="patientName" class="form-control" [(ngModel)]="model.patientName" #patientName="ngModel" ngModel/>
+                </div>
+                <div class="form-group p-2 " >
+                    <label for="testName" class="form-label">Test Name</label>
+                    <input type="text" name="testName" id="testName" class="form-control" [(ngModel)]="model.testName" #testName="ngModel" ngModel/>
+                </div>
+                <div class="form-group p-2 " >
+                    <label for="normalValue" class="form-label">Normal Value</label>
+                    <input type="number" name="normalValue" id="normalValue" class="form-control" [(ngModel)]="model.normalValue" #normalValue="ngModel" ngModel/>
+                </div>
+                <div class="form-group p-2 " >
+                    <label for="testReading" class="form-label">Test Reading </label>
+                    <input type="text" name="testReading" id="testReading" pattern="[a-zA-Z ]+$" placeholder="Test Reading" class="form-control" required minlength="4" [(ngModel)]="model.testReading" #testReading="ngModel" ngModel/>
+                    <span *ngIf="testReading.invalid && testReading.touched" style="color: red;">Please enter valid input</span>
+                </div>
+                <div class="form-group p-2 " >
+                    <label for="conditions" class="form-label">Condition</label>
+                    <input type="text" name="conditions" id="conditions" pattern="[a-zA-Z ]+$" placeholder="condition" class="form-control" required minlength="4" [(ngModel)]="model.conditions" #conditions="ngModel" ngModel/>
+                    <span *ngIf="conditions.invalid && conditions.touched" style="color: red;">Please enter valid input</span>
+                </div>
+                
+                <div class="form-group p-2">
+                    <button class="btn btn-success" [disabled]="resultForm.invalid" type="submit" >Save Result</button>
+                            &nbsp;
+                    <button class="btn btn-info" type="reset">Cancel</button>
+                </div>
+
+            </form>
+        </div>

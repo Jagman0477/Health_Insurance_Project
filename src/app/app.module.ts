@@ -14,6 +14,7 @@ import { TestCenterComponent } from './AdminComponents/test-center/test-center.c
 import { CommonModule } from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
+import { ApproveComponent } from './AdminComponents/approve/approve.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AboutComponent } from './about/about.component';
     AdminNavbarComponent,
     TestCenterComponent,
     AboutComponent,
+    ApproveComponent,
   ],
   imports: [
     BrowserModule,

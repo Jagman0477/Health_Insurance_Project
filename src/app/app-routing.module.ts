@@ -7,6 +7,7 @@ import { TestsComponent } from './AdminComponents/tests/tests.component';
 import { TestCenterComponent } from './AdminComponents/test-center/test-center.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { ApproveComponent } from './AdminComponents/approve/approve.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   {path: 'tests' , component:TestsComponent},
   { path: 'testCenter', component: TestCenterComponent },
+  {path:'approve', component:ApproveComponent}
 ];
 
 @NgModule({

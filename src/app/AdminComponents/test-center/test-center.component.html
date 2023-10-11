@@ -1,5 +1,5 @@
-<div class="d-flex row">
-    <div class="container col-7 ">
+<div class="d-flex mb-2">
+    <div class="container col-6">
         <h3 class="mt-5">Test Center List</h3>
         <hr>
         <table class="table text-center mt-2">
@@ -23,9 +23,7 @@
                     <td> {{cenlist.centerEmail}}</td>
                     <td> {{cenlist.testsOffered}}</td>
                     <td>
-                        <button class="btn btn-warning">Edit</button>
-                        &nbsp;
-                        <button class="btn btn-danger" (click)="deleteCenter(cenlist.id)">Delete</button>
+                        <button class="btn btn-danger" (click)="deleteCenter(cenlist.id)"><i class="fa fa-trash"></i></button>
                     </td>
                 </tr>
             </tbody>

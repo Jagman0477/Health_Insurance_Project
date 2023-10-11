@@ -34,6 +34,13 @@
       "testNormalValue": "23",
       "testUnits": "11",
       "id": 5
+    },
+    {
+      "testName": "Aman",
+      "testPrice": 123,
+      "testNormalValue": 11,
+      "testUnits": 2,
+      "id": 6
     }
   ],
   "testCenter": [
@@ -60,6 +67,22 @@
       "centerEmail": "manik@gmail.com",
       "testsOffered": "7yhsvd",
       "id": 3
+    },
+    {
+      "centerName": "rajatMedi",
+      "centerContact": 6546465465,
+      "centerAddress": "sbdfjkb",
+      "centerEmail": "njkdwfnj@gmail.com",
+      "testsOffered": "bkljdbw",
+      "id": 4
+    },
+    {
+      "centerName": "NaveenMdi",
+      "centerContact": 4646546,
+      "centerAddress": "jkbdwjkbdk",
+      "centerEmail": "abiw@jkbasd.com",
+      "testsOffered": "hkdbwjkbd",
+      "id": 5
     }
   ]
 }
