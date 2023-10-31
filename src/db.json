@@ -1,0 +1,132 @@
+{
+  "register": [
+    {
+      "name": "Pablo",
+      "age": 22,
+      "gender": "Male",
+      "email": "pablo@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "type": "customer",
+      "id": 1
+    },
+    {
+      "name": "Pablo",
+      "age": 22,
+      "gender": "Male",
+      "email": "pablo2@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "type": "admin",
+      "id": 2
+    },
+    {
+      "name": "pablo",
+      "age": 23,
+      "gender": "Male",
+      "email": "pablo@gmail.com",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "type": "customer",
+      "id": 3
+    }
+  ],
+  "login": [
+    {
+      "email": "pablo@gmail.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "email": "dawd@d.com",
+      "password": "awdwadd",
+      "id": 3
+    }
+  ],
+  "tests": [
+    {
+      "id": 1,
+      "testName": "Blood Test",
+      "testPrice": "120",
+      "testNormalValue": 120,
+      "testUnits": 12
+    },
+    {
+      "testName": "BloodTest",
+      "testPrice": 99,
+      "testNormalValue": 120,
+      "testUnits": 10,
+      "id": 2
+    },
+    {
+      "testName": "Raman",
+      "testPrice": "12",
+      "testNormalValue": "23",
+      "testUnits": "11",
+      "id": 3
+    },
+    {
+      "testName": "Stomach",
+      "testPrice": 25,
+      "testNormalValue": 120,
+      "testUnits": 25,
+      "id": 4
+    },
+    {
+      "testName": "Raman",
+      "testPrice": "12",
+      "testNormalValue": "23",
+      "testUnits": "11",
+      "id": 5
+    },
+    {
+      "testName": "Aman",
+      "testPrice": 123,
+      "testNormalValue": 11,
+      "testUnits": 2,
+      "id": 6
+    }
+  ],
+  "testCenter": [
+    {
+      "id": 1,
+      "centerName": "Medicenter",
+      "centerContact": "4576546",
+      "centerAddress": "Greater Noida",
+      "centerEmail": "medi@gmail.com",
+      "testsOffered": "blood_test"
+    },
+    {
+      "id": 2,
+      "centerName": "RajivCenter",
+      "centerContact": 56456464,
+      "centerAddress": "delhui",
+      "centerEmail": "raj@gmao.com",
+      "testsOffered": "454test"
+    },
+    {
+      "centerName": "amitcenter",
+      "centerContact": 987654432,
+      "centerAddress": "greater noida",
+      "centerEmail": "manik@gmail.com",
+      "testsOffered": "7yhsvd",
+      "id": 3
+    },
+    {
+      "centerName": "rajatMedi",
+      "centerContact": 6546465465,
+      "centerAddress": "sbdfjkb",
+      "centerEmail": "njkdwfnj@gmail.com",
+      "testsOffered": "bkljdbw",
+      "id": 4
+    },
+    {
+      "centerName": "NaveenMdi",
+      "centerContact": 4646546,
+      "centerAddress": "jkbdwjkbdk",
+      "centerEmail": "abiw@jkbasd.com",
+      "testsOffered": "hkdbwjkbd",
+      "id": 5
+    }
+  ]
+}
