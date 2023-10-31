@@ -1,0 +1,65 @@
+<div class="d-flex mb-2">
+    <div class="container col-6">
+        <h3 class="mt-5">Test Center List</h3>
+        <hr>
+        <table class="table text-center mt-2">
+            <thead>
+                <tr >
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Contact No.</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Tests Offered</th>
+                    <th>Action</th>
+                </tr>   
+            </thead>
+            <tbody>
+                <tr *ngFor="let cenlist of centerList">
+                    <td>{{cenlist.id}}</td>
+                    <td>{{cenlist.centerName}}</td>
+                    <td>{{cenlist.centerContact}}</td>
+                    <td> {{cenlist.centerAddress}}  </td>
+                    <td> {{cenlist.centerEmail}}</td>
+                    <td> {{cenlist.testsOffered}}</td>
+                    <td>
+                        <button class="btn btn-danger" (click)="deleteCenter(cenlist.id)"><i class="fa fa-trash"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text-danger">{{this.deleteCenterMessage}}</p>
+    </div>
+
+    <div class="container col-3">
+        <h3 class="mt-5">Add/Update Center</h3>
+        <hr>
+        <form class="row" [formGroup]="centerForm" (ngSubmit)="submitCenter()" >
+            <div class="form-group p-2 " >
+                <input type="text" placeholder="Center Name" class="form-control" formControlName="centerName"/>
+                <span style="color: red;" *ngIf="center && center.invalid && center.touched">Please enter valid input</span>
+            </div>
+            <div class="form-group p-2 ">
+                <input type="number" placeholder="Contact No." class="form-control" formControlName="centerContact"/>
+                <span style="color: red;" *ngIf="center && center.invalid && center.touched">Please enter valid input</span>
+            </div>
+            <div class="form-group p-2 col-6">
+                <input type="text" placeholder="Enter Address" class="form-control" formControlName="centerAddress"/>
+                <span style="color: red;" *ngIf="center && center.invalid && center.touched">Please enter valid input</span>
+            </div>
+            <div class="form-group p-2 col-6">
+                <input type="email" placeholder="Enter Email" class="form-control" formControlName="centerEmail"/>
+                <span style="color: red;" *ngIf="center && center.invalid && center.touched">Please enter valid input</span>
+            </div>
+            <div class="form-group p-2 ">
+                <input type="text" placeholder="Tests Available" class="form-control" formControlName="testsOffered"/>
+                <span style="color: red;" *ngIf="center && center.invalid && center.touched">Please enter valid input</span>
+            </div>
+            <div class="form-group p-2">
+                <button class="btn btn-success" type="button" (click)="addCenter(this.centerForm.value)" [disabled]="this.centerForm.invalid">Submit</button>
+                        &nbsp;
+                <button class="btn btn-info" type="reset" >Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

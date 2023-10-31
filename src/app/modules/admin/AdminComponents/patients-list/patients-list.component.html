@@ -1,0 +1,106 @@
+<!-- <div class="d-flex row">
+    <div class="container col-5 mb-4">
+        <h3 class="mt-5">Patients List</h3>
+        <hr>
+        <div class="error-message">
+            <small class="text-danger">{{patientListError}}</small>
+        </div>
+        <table class="table text-center mt-2">
+            <thead>
+                <tr >
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pat of patientList">
+                    <td>{{pat.name}}</td>
+                    <td>{{pat.age}}</td>
+                    <td>{{pat.gender}}</td>
+                    <td>{{pat.email}}</td>
+                    <td>
+                        &nbsp;
+                        <button class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+    <!-- <div class="container col-3">
+        <h3 class="mt-5">Add/Update Test</h3>
+        <hr>
+        <form class="row">
+            <div class="form-group p-2 " >
+                <input type="text" placeholder="Test Name" class="form-control"/>
+            </div>
+            <div class="form-group p-2 ">
+                <input type="number" placeholder="Price" class="form-control"/>
+            </div>
+            <div class="form-group p-2 col-6">
+                <input type="number" placeholder="Normal Value" class="form-control"/>
+            </div>
+            <div class="form-group p-2 col-6">
+                <input type="number" placeholder="Units" class="form-control"/>
+            </div>
+            <div class="form-group p-2">
+                <button class="btn btn-success" type="submit" >Submit</button>
+                        &nbsp;
+                <button class="btn btn-info" type="reset" >Cancel</button>
+            </div>
+        </form>
+    </div> -->
+<!-- </div> -->
+<section class="intro">
+    <div class="bg-image h-100" style="background-color: #f5f7fa;">
+      <div class="mask d-flex align-items-center h-100">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+                <h3 class="mt-5">Patients List</h3>
+                    <hr>
+              <div class="card shadow-2-strong">
+                <div class="card-body p-0">
+                  <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative;">
+                    
+                    <div class="error-message">
+                        <small class="text-danger">{{patientListError}}</small>
+                    </div>
+                    <table class="table table-light table-striped mb-0">
+                      <thead style="background-color: #393939;">
+                        <tr class="text-uppercase text-success">
+                            <th scope="col">Patient ID</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Age</th>
+                          <th scope="col">Gender</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr  *ngFor="let pat of patientList; let i = index">
+                            <td>{{i}}</td>
+                          <td>{{pat.name}}</td>
+                          <td>{{pat.age}}</td>
+                          <td>{{pat.gender}}</td>
+                          <td>{{pat.email}}</td>
+                          <td>
+                            &nbsp;
+                            <button class="btn btn-danger" (click)="deletePatient(i)">Delete</button>
+                            </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
